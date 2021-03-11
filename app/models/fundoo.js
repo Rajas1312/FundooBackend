@@ -6,6 +6,9 @@
  * @since        15/2/2021  
 -----------------------------------------------------------------------------------------------*/
 const mongoose = require('mongoose');
+const bcrypt = require("bcrypt")
+const password = "mypass123"
+const saltRounds = 10
 
 const FundooSchema = mongoose.Schema({
     firstName: { type: String, required: true },
@@ -16,7 +19,15 @@ const FundooSchema = mongoose.Schema({
     timestamps: true
 }, { versionKey: false });
 
-const Fundoo = mongoose.model('Greetings', FundooSchema);
+FundooSchema.pre("save", async function (next) {
+    if (this.isModified("password")) {
+        this.password = await bcrypt.hash(this.password, 10);
+        //this.confirmPassword = undefined;
+    }
+    next();
+});
+
+const Fundoo = mongoose.model('Fundoo', FundooSchema);
 
 class FundooModel {
 
@@ -33,7 +44,6 @@ class FundooModel {
             email: fundoo.email,
             password: fundoo.password
         });
-
         fundo.save(callback)
     };
 

@@ -17,12 +17,12 @@ const ControllerDataValidation = Joi.object().keys({
 })
 
 class FundooController {
+
     /**
          * @description Create and save a new Note
          * @param req is used to get the request
          * @param res is used to send resposne
          */
-
     create = (req, res,) => {
         try {
             const fundoo = {
@@ -72,7 +72,6 @@ class FundooController {
            * @param req is used to get the request
            *  @param res is used to send resposne
            */
-
     findAll = (req, res) => {
         try {
             service.findAll((err, result) => {
