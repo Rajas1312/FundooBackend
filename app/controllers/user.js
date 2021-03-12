@@ -1,13 +1,14 @@
 /**
  * @module       controllers
- * @file         fundoo.js
+ * @file         user.js
  * @description  FundooController class takes the request and sends response
  * @author       Rajas Dongre <itsmerajas2@gmail.com>
 *  @since        15/02/2021  
 -----------------------------------------------------------------------------------------------*/
-const service = require('../services/fundoo');
+const service = require('../services/user');
 const Joi = require('joi');
 const logger = require('../../logger/logger.js')
+const statics = require('../../static.json')
 
 const ControllerDataValidation = Joi.object().keys({
     firstName: Joi.string().required(),
@@ -16,7 +17,7 @@ const ControllerDataValidation = Joi.object().keys({
     password: Joi.string().required()
 })
 
-class FundooController {
+class UserController {
 
     /**
          * @description Create and save a new Note
@@ -25,44 +26,30 @@ class FundooController {
          */
     create = (req, res,) => {
         try {
-            const fundoo = {
+            const user = {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 email: req.body.email,
                 password: req.body.password
             };
-            const validation = ControllerDataValidation.validate(fundoo);
+            const validation = ControllerDataValidation.validate(user);
             if (validation.error) {
-                res.status(400).send({
-                    success: false,
-                    message: "the notes should be a string type"
-                })
+                res.status(400).send(statics.Bad_Request)
             } else {
-                service.create(fundoo, (err, result) => {
+                service.create(user, (err, result) => {
                     if (err) {
                         (logger.error("Some error occurred while creating notes"),
-                            res.status(500).send({
-                                sucess: false,
-                                message: "Some error occurred while creating the Note."
-                            })
+                            res.status(500).send(statics.Internal_Server_Error)
                         )
                     } else {
                         logger.info("Notes added successfully !"),
-                            res.status(200).send({
-                                sucess: true,
-                                message: "created Notes sucessfully",
-                                result: result
-                            });
+                            res.status(200).send(statics.Success);
                     }
                 });
             }
         } catch (error) {
             logger.error("could not create notes ");
-            return res.send({
-                success: false,
-                status_code: 500,
-                message: "error creating notes "
-            })
+            return res.send(statics.Internal_Server_Error)
         }
     };
 
@@ -101,4 +88,4 @@ class FundooController {
         }
     };
 }
-module.exports = new FundooController();
+module.exports = new UserController();

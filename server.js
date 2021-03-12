@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('./logger/logger');
+const port = process.env.PORT || 3000
 
 // create express app
 const app = express();
@@ -28,15 +29,10 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 
-// // define a simple route
-// app.get('/', (req, res) => {
-//     res.json({ "message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes." });
-// });
-
-// Require Notes routes
-require('./app/routes/fundoo')(app);
+require('./app/routes/user')(app);
 
 // listen for requests
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+app.listen(port, () => {
+    //console.log("Server is listening on port 3000");
+    logger.info(`server is listining at port ${port}`)
 });

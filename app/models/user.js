@@ -1,16 +1,14 @@
 /**
  * @module       models
- * @file         fundoo.js
- * @description  FundooModel class holds the databse related methods 
+ * @file         user.js
+ * @description  UserModel class holds the databse related methods 
  * @author       Rajas Dongre <itsmerajas2@gmail.com>
  * @since        15/2/2021  
 -----------------------------------------------------------------------------------------------*/
 const mongoose = require('mongoose');
 const bcrypt = require("bcrypt")
-const password = "mypass123"
-const saltRounds = 10
 
-const FundooSchema = mongoose.Schema({
+const UserSchema = mongoose.Schema({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     email: { type: String, required: true },
@@ -19,17 +17,16 @@ const FundooSchema = mongoose.Schema({
     timestamps: true
 }, { versionKey: false });
 
-FundooSchema.pre("save", async function (next) {
+UserSchema.pre("save", async function (next) {
     if (this.isModified("password")) {
         this.password = await bcrypt.hash(this.password, 10);
-        //this.confirmPassword = undefined;
     }
     next();
 });
 
-const Fundoo = mongoose.model('Fundoo', FundooSchema);
+const User = mongoose.model('User', UserSchema);
 
-class FundooModel {
+class UserModel {
 
     /**
      * @description saving  greetings in the database
@@ -37,14 +34,14 @@ class FundooModel {
      * @param {*}callback 
      */
 
-    create = (fundoo, callback) => {
-        const fundo = new Fundoo({
-            firstName: fundoo.firstName,
-            lastName: fundoo.lastName,
-            email: fundoo.email,
-            password: fundoo.password
+    create = (user, callback) => {
+        const userSchema = new User({
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            password: user.password
         });
-        fundo.save(callback)
+        userSchema.save(callback)
     };
 
     /**
@@ -53,7 +50,7 @@ class FundooModel {
          */
 
     findAll = (callback) => {
-        Fundoo.find(callback);
+        User.find(callback);
     }
 }
-module.exports = new FundooModel();
+module.exports = new UserModel();
