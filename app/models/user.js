@@ -6,7 +6,8 @@
  * @since        15/2/2021  
 -----------------------------------------------------------------------------------------------*/
 const mongoose = require('mongoose');
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcrypt");
+const { version } = require('joi');
 
 const UserSchema = mongoose.Schema({
     firstName: { type: String, required: true },
@@ -15,7 +16,8 @@ const UserSchema = mongoose.Schema({
     password: { type: String, required: true, select: false }
 }, {
     timestamps: true
-}, { versionKey: false });
+});
+UserSchema.set("versionKey", false)
 
 UserSchema.pre("save", async function (next) {
     if (this.isModified("password")) {
@@ -33,8 +35,7 @@ class UserModel {
      * @param {*} greetings 
      * @param {*}callback 
      */
-
-    create = (user, callback) => {
+    createUser = (user, callback) => {
         const userSchema = new User({
             firstName: user.firstName,
             lastName: user.lastName,
@@ -45,12 +46,12 @@ class UserModel {
     };
 
     /**
-         * @description serching all greetings from database
-         * @param {*}callback 
-         */
-
-    findAll = (callback) => {
-        User.find(callback);
-    }
+     * @description find the user
+     * @param {*} userLoginData
+     * @param {*} callback
+     */
+    findUser = (userLogin, callback) => {
+        User.find({ emailId: userLogin.email }, callback)
+    };
 }
 module.exports = new UserModel();

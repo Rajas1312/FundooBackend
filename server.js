@@ -1,7 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('./logger/logger');
-const port = process.env.PORT || 3000
+const dotenv = require('dotenv');
+dotenv.config();
+const port = process.env.PORT
 
 // create express app
 const app = express();
@@ -33,6 +35,5 @@ require('./app/routes/user')(app);
 
 // listen for requests
 app.listen(port, () => {
-    //console.log("Server is listening on port 3000");
     logger.info(`server is listining at port ${port}`)
 });

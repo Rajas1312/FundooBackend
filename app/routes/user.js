@@ -1,10 +1,9 @@
+const notes = require('../controllers/user');
 module.exports = (app) => {
-    const notes = require('../controllers/user');
+    // Create a new user
+    app.post('/user', notes.createUser);
 
-    // Create a new Note
-    app.post('/notes', notes.create);
-
-    // Retrieve all Notes
-    app.get('/notes', notes.findAll);
+    // Login existing user
+    app.post("/login", notes.loginUser);
 
 }

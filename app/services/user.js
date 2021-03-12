@@ -14,17 +14,12 @@ class UserService {
      * @method create is used to save the notes
      * @param callback is the callback for controller
      */
-    create = (user, callback) => {
-        model.create(user, callback)
+    createUser = (user, callback) => {
+        model.createUser(user, callback)
     }
 
-    /**
-     * @description Find all the notes and return response to controller
-     * @method findAll is used to retrieve notes
-     * @param callback is the callback for controller
-     */
-    findAll = (callback) => {
-        model.findAll(callback);
+    loginUser = (userLogin, callback) => {
+        model.findUser(userLogin, callback)
     }
 }
 module.exports = new UserService();

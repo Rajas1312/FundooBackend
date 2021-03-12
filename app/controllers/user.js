@@ -8,7 +8,8 @@
 const service = require('../services/user');
 const Joi = require('joi');
 const logger = require('../../logger/logger.js')
-const statics = require('../../static.json')
+const statics = require('../../utility/static.json')
+const bcrypt = require("bcrypt");
 
 const ControllerDataValidation = Joi.object().keys({
     firstName: Joi.string().required(),
@@ -24,7 +25,7 @@ class UserController {
          * @param req is used to get the request
          * @param res is used to send resposne
          */
-    create = (req, res,) => {
+    createUser = (req, res,) => {
         try {
             const user = {
                 firstName: req.body.firstName,
@@ -36,7 +37,7 @@ class UserController {
             if (validation.error) {
                 res.status(400).send(statics.Bad_Request)
             } else {
-                service.create(user, (err, result) => {
+                service.createUser(user, (err, result) => {
                     if (err) {
                         (logger.error("Some error occurred while creating notes"),
                             res.status(500).send(statics.Internal_Server_Error)
@@ -53,39 +54,33 @@ class UserController {
         }
     };
 
-    /**
-           * @description Find all the Notes
-           * @method findAll is service class method
-           * @param req is used to get the request
-           *  @param res is used to send resposne
-           */
-    findAll = (req, res) => {
-        try {
-            service.findAll((err, result) => {
-                if (err) {
-                    (logger.error("Some error occurred while serching notes"),
-                        res.status(404).send({
-                            sucess: false,
-                            message: "could not find any entries"
-                        })
-                    )
-                } else {
-                    logger.info("notes found successfully !"),
-                        res.status(200).send({
-                            sucess: true,
-                            message: "found notes sucessfully",
-                            result: result
-                        })
-                }
-            })
-        } catch (error) {
-            logger.error("notes not found");
-            res.send({
-                success: false,
-                status_code: 500,
-                message: `notes not found`,
-            });
-        }
-    };
+    loginUser = (req, res) => {
+        let password = req.body.password;
+        const userLogin = {
+            emailId: req.body.email,
+            password: password,
+        };
+        service.loginUser(userLogin, (error, result) => {
+            if (error) {
+                res.send({
+                    message: "error"
+                })
+            } else {
+                bcrypt.compare(
+                    userLogin.password, res[0].password, (error, result) => {
+                        if (error) {
+                            console.log("error")
+                        } else {
+                            console.log("ok!!")
+                        }
+                    }
+                )
+                res.send({
+                    message: "ok"
+                })
+            }
+
+        })
+    }
 }
 module.exports = new UserController();
