@@ -18,5 +18,10 @@
         "Success": false,
         "status_code": 500,
         "message": "Internal_Server_Error"
+    },
+    "SuccessLogin": {
+        "Success": true,
+        "status_code": 200,
+        "message": "logged in sucessfully"
     }
 }

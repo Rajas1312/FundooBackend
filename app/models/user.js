@@ -8,6 +8,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require("bcrypt");
 const { version } = require('joi');
+const { error } = require('winston');
 
 const UserSchema = mongoose.Schema({
     firstName: { type: String, required: true },
@@ -51,7 +52,7 @@ class UserModel {
      * @param {*} callback
      */
     findUser = (userLogin, callback) => {
-        User.find({ emailId: userLogin.email }, callback)
+        User.findOne({ email: userLogin.emailId }, callback)
     };
 }
 module.exports = new UserModel();

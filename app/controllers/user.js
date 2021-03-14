@@ -10,11 +10,18 @@ const Joi = require('joi');
 const logger = require('../../logger/logger.js')
 const statics = require('../../utility/static.json')
 const bcrypt = require("bcrypt");
+const jwt = require('jsonwebtoken')
+const JWT_SECRET = "kasaks"
 
-const ControllerDataValidation = Joi.object().keys({
+
+const ControllerUserValidation = Joi.object().keys({
     firstName: Joi.string().required(),
     lastName: Joi.string().required(),
     email: Joi.string().required(),
+    password: Joi.string().required()
+})
+const ControllerLoginValidation = Joi.object().keys({
+    emailId: Joi.string().required(),
     password: Joi.string().required()
 })
 
@@ -33,7 +40,7 @@ class UserController {
                 email: req.body.email,
                 password: req.body.password
             };
-            const validation = ControllerDataValidation.validate(user);
+            const validation = ControllerUserValidation.validate(user);
             if (validation.error) {
                 res.status(400).send(statics.Bad_Request)
             } else {
@@ -43,6 +50,7 @@ class UserController {
                             res.status(500).send(statics.Internal_Server_Error)
                         )
                     } else {
+                        //console.log(result)
                         logger.info("Notes added successfully !"),
                             res.status(200).send(statics.Success);
                     }
@@ -55,32 +63,37 @@ class UserController {
     };
 
     loginUser = (req, res) => {
-        let password = req.body.password;
+
         const userLogin = {
             emailId: req.body.email,
-            password: password,
+            password: req.body.password
         };
-        service.loginUser(userLogin, (error, result) => {
-            if (error) {
-                res.send({
-                    message: "error"
-                })
-            } else {
-                bcrypt.compare(
-                    userLogin.password, res[0].password, (error, result) => {
-                        if (error) {
-                            console.log("error")
+        const validation = ControllerLoginValidation.validate(userLogin);
+        if (validation.error) {
+            res.status(400).send(statics.Bad_Request)
+        } else {
+            service.loginUser(userLogin, (err, result) => {
+                if (err) {
+                    (logger.error("Some error occurred while logging in"),
+                        res.status(500).send(statics.Internal_Server_Error)
+                    )
+                } else {
+                    bcrypt.compare(userLogin.password, result.password, (error, data) => {
+                        if (data) {
+                            const id = result._id
+                            console.log(id)
+                            const token = jwt.sign({ email: result.email, id: result._id }, JWT_SECRET)
+                            console.log(token)
                         } else {
-                            console.log("ok!!")
+                            console.log("Invalid email/password")
+                            return error
                         }
-                    }
-                )
-                res.send({
-                    message: "ok"
-                })
-            }
-
-        })
+                    })
+                    logger.info("logged in  successfully !"),
+                        res.status(200).send(statics.SuccessLogin);
+                }
+            });
+        }
     }
 }
 module.exports = new UserController();

@@ -6,6 +6,7 @@
 *  @since        15/02/2021  
 -----------------------------------------------------------------------------------------------*/
 
+const { error } = require('winston');
 const model = require('../models/user');
 class UserService {
 
