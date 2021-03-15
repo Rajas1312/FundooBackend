@@ -72,26 +72,25 @@ class UserController {
         if (validation.error) {
             res.status(400).send(statics.Bad_Request)
         } else {
-            service.loginUser(userLogin, (err, result) => {
-                if (err) {
-                    (logger.error("Some error occurred while logging in"),
-                        res.status(500).send(statics.Internal_Server_Error)
-                    )
+            service.loginUser(userLogin, (error, result) => {
+                if (!result) {
+                    logger.error("Some error occurred while logging in"),
+                        res.status(500).send(statics.InvalidCredentials)
+
                 } else {
-                    bcrypt.compare(userLogin.password, result.password, (error, data) => {
+                    bcrypt.compare(userLogin.password, result.password, (err, data) => {
                         if (data) {
-                            const id = result._id
-                            console.log(id)
                             const token = jwt.sign({ email: result.email, id: result._id }, JWT_SECRET)
-                            console.log(token)
-                        } else {
-                            console.log("Invalid email/password")
-                            return error
+                            result.token = token;
+                            logger.info("logged in  successfully !"),
+                                res.status(200).send({ token: result.token, satus: statics.SuccessLogin });
+                        }
+                        if (!data) {
+                            res.status(500).send(statics.InvalidCredentials)
                         }
                     })
-                    logger.info("logged in  successfully !"),
-                        res.status(200).send(statics.SuccessLogin);
                 }
+
             });
         }
     }
