@@ -11,8 +11,8 @@ const logger = require('../../logger/logger.js')
 const statics = require('../../utility/static.json')
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken')
-const JWT_SECRET = "kasaks"
-
+const helper = require('../../utility/helper')
+const nodemailer = require('nodemailer');
 
 const ControllerUserValidation = Joi.object().keys({
     firstName: Joi.string().required(),
@@ -80,8 +80,7 @@ class UserController {
                 } else {
                     bcrypt.compare(userLogin.password, result.password, (err, data) => {
                         if (data) {
-                            const token = jwt.sign({ email: result.email, id: result._id }, JWT_SECRET)
-                            result.token = token;
+                            result.token = helper.createToken(result)
                             logger.info("logged in  successfully !"),
                                 res.status(200).send({ token: result.token, satus: statics.SuccessLogin });
                         }
@@ -93,6 +92,51 @@ class UserController {
 
             });
         }
+    }
+
+    forgotPassword = (req, res) => {
+        const userLogin = {
+            emailId: req.body.email
+        }
+        service.forgotPassword(userLogin, (error, result) => {
+            if (!result) {
+                logger.error("Some error occurred while logging in"),
+                    res.status(500).send(statics.InvalidCredentials)
+
+            } else {
+
+                result.token = helper.createToken(result)
+                console.log(result.token)
+                res.send({ message: "ok" })
+
+                let transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                        user: 'itsmerajas2@gmail.com',
+                        pass: 'Rajas123'
+                    },
+                    tls: {
+                        rejectUnauthorized: false
+                    }
+                });
+
+                var mailOptions = {
+                    from: 'itsmerajas2@gmail.com',
+                    to: 'itsmerajas2@gmail.com',
+                    subject: 'Sending Email using Node.js',
+                    text: ` JWT-:${result.token} ${'http://localhost:3000'}`
+
+                };
+
+                transporter.sendMail(mailOptions, function (error, info) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log('Email sent: ' + info.response);
+                    }
+                });
+            }
+        })
     }
 }
 module.exports = new UserController();

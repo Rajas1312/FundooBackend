@@ -22,5 +22,9 @@ class UserService {
     loginUser = (userLogin, callback) => {
         model.findUser(userLogin, callback)
     }
+
+    forgotPassword = (userLogin, callback) => {
+        model.findUser(userLogin, callback)
+    }
 }
 module.exports = new UserService();

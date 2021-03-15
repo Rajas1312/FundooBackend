@@ -6,4 +6,6 @@ module.exports = (app) => {
     // Login existing user
     app.post("/login", notes.loginUser);
 
+    app.post("/forgotPassword", notes.forgotPassword)
+
 }
