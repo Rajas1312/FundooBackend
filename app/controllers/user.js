@@ -13,6 +13,9 @@ const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken')
 const helper = require('../../utility/helper')
 const nodemailer = require('nodemailer');
+const dotenv = require('dotenv');
+const { error } = require('../../logger/logger.js');
+dotenv.config();
 
 const ControllerUserValidation = Joi.object().keys({
     firstName: Joi.string().required(),
@@ -50,7 +53,6 @@ class UserController {
                             res.status(500).send(statics.Internal_Server_Error)
                         )
                     } else {
-                        //console.log(result)
                         logger.info("Notes added successfully !"),
                             res.status(200).send(statics.Success);
                     }
@@ -63,7 +65,6 @@ class UserController {
     };
 
     loginUser = (req, res) => {
-
         const userLogin = {
             emailId: req.body.email,
             password: req.body.password
@@ -105,29 +106,27 @@ class UserController {
 
             } else {
 
+                logger.info("email sent sucessfully")
                 result.token = helper.createToken(result)
-                console.log(result.token)
-                res.send({ message: "ok" })
+                res.send(statics.SuccessEmail)
 
                 let transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
-                        user: 'itsmerajas2@gmail.com',
-                        pass: 'Rajas123'
+                        user: result.email,
+                        pass: process.env.PASSWORD
                     },
                     tls: {
                         rejectUnauthorized: false
                     }
                 });
-
-                var mailOptions = {
-                    from: 'itsmerajas2@gmail.com',
+                let mailOptions = {
+                    from: result.email,
                     to: 'itsmerajas2@gmail.com',
                     subject: 'Sending Email using Node.js',
-                    text: ` JWT-:${result.token} ${'http://localhost:3000'}`
+                    text: ` ${'http://localhost:3000/login'} ${result.token}`
 
                 };
-
                 transporter.sendMail(mailOptions, function (error, info) {
                     if (error) {
                         console.log(error);
@@ -135,6 +134,25 @@ class UserController {
                         console.log('Email sent: ' + info.response);
                     }
                 });
+            }
+        })
+    }
+
+    resetPassword = (req, res) => {
+        const userInfo = {
+            token: req.body.token,
+            password: req.body.password
+        }
+        const user = jwt.verify(userInfo.token, process.env.JWT_SECRET)
+        userInfo.Id = user.id
+        service.resetPassword(userInfo, (err, result) => {
+            if (err) {
+                logger.error("Some error occurred while creating notes")
+                res.status(500).send(statics.Internal_Server_Error)
+            }
+            else {
+                logger.info("paswword chenged sucessfully")
+                res.send(statics.SuccessReset)
             }
         })
     }

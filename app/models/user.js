@@ -54,5 +54,18 @@ class UserModel {
     findUser = (userLogin, callback) => {
         User.findOne({ email: userLogin.emailId }, callback)
     };
+
+    update = (userInfo, callback) => {
+        const newPassword = userInfo.password;
+        bcrypt.hash(newPassword, 10, function (error, hash) {
+            if (error) {
+                error = "New password unable to hash";
+                callback(error, null);
+            } else {
+                User.findByIdAndUpdate(
+                    userInfo.Id, { $set: { password: hash } }, { new: true }, callback);
+            }
+        });
+    };
 }
 module.exports = new UserModel();

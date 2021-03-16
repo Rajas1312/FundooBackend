@@ -3,11 +3,11 @@ const JWT_SECRET = "kasaks"
 class Helper {
     createToken = (data) => {
         return jwt.sign({
-            emailId: data.emailId,
+            emailId: data.email,
             id: data._id,
         },
             JWT_SECRET, {
-            expiresIn: "60d",
+            expiresIn: "30d",
         })
     }
 }

@@ -8,4 +8,6 @@ module.exports = (app) => {
 
     app.post("/forgotPassword", notes.forgotPassword)
 
+    app.post("/resetPassword", notes.resetPassword)
+
 }

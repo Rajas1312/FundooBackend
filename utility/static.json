@@ -28,5 +28,15 @@
         "Success": false,
         "status_code": 500,
         "message": "Invalid_credentials"
+    },
+    "SuccessEmail": {
+        "Success": true,
+        "status_code": 200,
+        "message": "email sent sucessfully"
+    },
+    "SuccessReset": {
+        "Success": true,
+        "status_code": 200,
+        "message": "password reset sucessfull"
     }
 }
