@@ -1,0 +1,199 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is Fundoo Api",
+        "version": "1.0.0",
+        "title": "FUNDOO API",
+        "email": "sampleEmail",
+        "host": "localhost:3000",
+        "basePath": "/"
+    },
+    "tags": [
+        {
+            "name": "Fundoo",
+            "description": "Everything about Fundoo API"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/user": {
+            "post": {
+                "tags": [
+                    "Fundoo user registration"
+                ],
+                "description": "create a new user",
+                "summary": "create a user",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": " user ",
+                        "in": "body",
+                        "type": "string",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "firstName": {
+                                    "type": "string"
+                                },
+                                "lastName": {
+                                    "type": "string"
+                                },
+                                "email": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User created successfully"
+                    },
+                    "400": {
+                        "description": "user cannot be empty"
+                    }
+                }
+            }
+        },
+        "/login": {
+            "post": {
+                "tags": [
+                    "Fundoo user login"
+                ],
+                "description": "create a user login",
+                "summary": "user login",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": " user login ",
+                        "in": "body",
+                        "type": "string",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User login successful"
+                    },
+                    "400": {
+                        "description": "user login unsuccessful"
+                    }
+                }
+            }
+        },
+        "/forgotPassword": {
+            "post": {
+                "tags": [
+                    "Fundoo user forgot password"
+                ],
+                "description": "create a forgo password endpoint",
+                "summary": "forgot password",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": " forgot password ",
+                        "in": "body",
+                        "type": "string",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "email sent sucessfully"
+                    },
+                    "400": {
+                        "description": "email verifcation uncessfull"
+                    }
+                }
+            }
+        },
+        "/resetPassword": {
+            "post": {
+                "tags": [
+                    "Fundoo user reset password"
+                ],
+                "description": "create a reset password endpoint",
+                "summary": "reset password",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": " reset password ",
+                        "in": "body",
+                        "type": "string",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "token": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "password rest sucessfully"
+                    },
+                    "400": {
+                        "description": "password reset unsccessfull"
+                    }
+                }
+            }
+        }
+    }
+}

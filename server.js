@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('./logger/logger');
 const dotenv = require('dotenv');
+const swaggerUi = require('swagger-ui-express')
+const swaggerJson = require('./swagger/swagger.json')
 dotenv.config();
 const port = process.env.PORT
 
@@ -32,6 +34,8 @@ mongoose.connect(dbConfig.url, {
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
 });
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerJson))
 
 require('./app/routes/user')(app);
 

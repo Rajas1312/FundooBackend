@@ -28,6 +28,7 @@
     "logger": "0.0.1",
     "mongoose": "^5.11.15",
     "nodemailer": "^6.5.0",
+    "swagger-ui-express": "^4.1.6",
     "winston": "^3.3.3"
   },
   "devDependencies": {

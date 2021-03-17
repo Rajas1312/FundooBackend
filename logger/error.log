@@ -8,3 +8,5 @@
 {"message":"Some error occurred while logging in","level":"error","timestamp":"2021-03-15T08:43:17.790Z"}
 {"message":"Some error occurred while logging in","level":"error","timestamp":"2021-03-15T08:44:12.665Z"}
 {"message":"Some error occurred while logging in","level":"error","timestamp":"2021-03-15T08:51:03.052Z"}
+{"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-17T12:09:49.901Z"}
+{"message":"Some error occurred while logging in","level":"error","timestamp":"2021-03-17T12:44:39.842Z"}
