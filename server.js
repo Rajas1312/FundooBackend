@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('./logger/logger');
+const dotenv = require('dotenv');
+dotenv.config();
+const port = process.env.PORT
 
 // create express app
 const app = express();
@@ -20,7 +23,9 @@ mongoose.Promise = global.Promise;
 // Connecting to the database
 mongoose.connect(dbConfig.url, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
 }).then(() => {
     console.log("Successfully connected to the database");
 }).catch(err => {
@@ -28,15 +33,9 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 
-// // define a simple route
-// app.get('/', (req, res) => {
-//     res.json({ "message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes." });
-// });
-
-// Require Notes routes
-require('./app/routes/fundoo')(app);
+require('./app/routes/user')(app);
 
 // listen for requests
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+app.listen(port, () => {
+    logger.info(`server is listining at port ${port}`)
 });

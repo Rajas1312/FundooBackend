@@ -1,0 +1,42 @@
+{
+    "Success": {
+        "Success": true,
+        "status_code": 200,
+        "message": "user created sucessfully"
+    },
+    "Not_Found": {
+        "Success": false,
+        "status_code": 404,
+        "message": "Not_Found"
+    },
+    "Bad_Request": {
+        "Success": false,
+        "status_code": 400,
+        "message": "Bad_Request"
+    },
+    "Internal_Server_Error": {
+        "Success": false,
+        "status_code": 500,
+        "message": "Internal_Server_Error"
+    },
+    "SuccessLogin": {
+        "Success": true,
+        "status_code": 200,
+        "message": "logged in sucessfully"
+    },
+    "InvalidCredentials": {
+        "Success": false,
+        "status_code": 500,
+        "message": "Invalid_credentials"
+    },
+    "SuccessEmail": {
+        "Success": true,
+        "status_code": 200,
+        "message": "email sent sucessfully"
+    },
+    "SuccessReset": {
+        "Success": true,
+        "status_code": 200,
+        "message": "password reset sucessfull"
+    }
+}
