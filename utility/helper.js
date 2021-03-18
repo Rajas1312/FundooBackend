@@ -10,5 +10,6 @@ class Helper {
             expiresIn: "30d",
         })
     }
+
 }
 module.exports = new Helper();
