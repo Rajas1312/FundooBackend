@@ -2,6 +2,7 @@ const noteService = require("../services/notes.js");
 const Joi = require("joi");
 const logger = require("../../logger/logger.js");
 const status = require("../../utility/static.json");
+const jwt = require('jsonwebtoken')
 
 const ControllerDataValidation = Joi.object({
     title: Joi.string().required(),
@@ -20,13 +21,14 @@ class NoteController {
                 title: req.body.title,
                 description: req.body.description,
             };
+
             const validation = ControllerDataValidation.validate(noteInfo);
             return validation.error ?
                 res.status(400).send({
                     success: false,
                     message: "please enter valid details",
                 }) :
-                noteService.create(noteInfo, (error, data) => {
+                noteService.createNotes(noteInfo, (error, data) => {
                     return error ?
                         (logger.error("Some error occurred while creating note"),
                             res.send({
@@ -49,5 +51,38 @@ class NoteController {
             });
         }
     };
+
+    /**
+    * @description find all notes from db
+    * @message Find all the note
+    * @method findAll is service class method
+    */
+    findAll = (req, res) => {
+        try {
+            noteService.findAll((error, data) => {
+                return error ?
+                    (logger.error("Some error occurred while retrieving notes"),
+                        res.send({
+                            success: false,
+                            status_code: status.Not_Found,
+                            message: `note not found`,
+                        })) :
+                    (logger.info("Successfully retrieved notes !"),
+                        res.send({
+                            success: true,
+                            status_code: status.Success,
+                            message: `note found`,
+                            data: data,
+                        }));
+            });
+        } catch (error) {
+            res.send({
+                success: false,
+                status_code: status.Internal_Server_Error,
+                message: `note not found`,
+            });
+        }
+    };
+
 }
 module.exports = new NoteController()

@@ -25,5 +25,13 @@ class NoteModel {
         });
         note.save(callback);
     };
+
+    /**
+     * @description find all notes from db
+     * @param {*} callback
+     */
+    findAll = (callback) => {
+        Note.find(callback);
+    };
 }
 module.exports = new NoteModel()

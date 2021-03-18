@@ -14,5 +14,7 @@ module.exports = (app) => {
 
     // Create a new note
     app.post("/notes", notes.createNotes);
+
+    app.get("/notes", notes.findAll);
 }
 
