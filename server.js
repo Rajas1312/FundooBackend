@@ -43,3 +43,5 @@ require('./app/routes/user')(app);
 app.listen(port, () => {
     logger.info(`server is listining at port ${port}`)
 });
+
+module.exports = app;
