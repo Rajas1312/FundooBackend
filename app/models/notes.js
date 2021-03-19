@@ -1,10 +1,16 @@
 const mongoose = require("mongoose");
+const User = require("../models/user.js");
 
 const NoteSchema = mongoose.Schema({
     title: { type: String, required: true, trim: true, },
     description: { type: String, required: true, trim: true, },
-    isArchive: { type: Boolean, default: false },
-    isDelete: { type: Boolean, default: false },
+    isArchived: { type: Boolean, default: false },
+    isDeleted: { type: Boolean, default: false },
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    }
+
 }, {
     timestamps: true,
 });
@@ -22,7 +28,9 @@ class NoteModel {
         const note = new Note({
             title: noteInfo.title,
             description: noteInfo.description,
+            userId: noteInfo.userId
         });
+        console.log(note)
         note.save(callback);
     };
 
@@ -30,8 +38,33 @@ class NoteModel {
      * @description find all notes from db
      * @param {*} callback
      */
-    findAll = (callback) => {
+    findNotes = (callback) => {
         Note.find(callback);
     };
+
+    /**
+    * @description update a note by Id
+    * @param {*} noteInfo
+    * @param {*} callback
+    */
+    updateNotes = (noteInfo, callback) => {
+        Note.findByIdAndUpdate(
+            noteInfo.noteID, {
+            title: noteInfo.title,
+            description: noteInfo.description,
+        }, { new: true },
+            callback
+        );
+    };
+
+    /**
+     * @description delete the id from databse and returns the result to service
+     * @param {*} noteID coming from service class
+     * @param {*} callback callback for service class
+     */
+    deleteById = (noteID, callback) => {
+        Note.findByIdAndRemove(noteID, callback);
+    };
+
 }
 module.exports = new NoteModel()

@@ -8,7 +8,8 @@ class NoteService {
      * @method create is used to save the Note
      * @param callback is the callback for controller
      */
-    createNotes = (noteInfo, callback) => {
+    createNotes = (noteInfo, token, callback) => {
+        noteInfo = helper.decodeToken(noteInfo, token);
         return model.createNotes(noteInfo, callback);
     };
 
@@ -17,8 +18,26 @@ class NoteService {
      * @method findAll is used to retrieve Notes
      * @param callback is the callback for controller
      */
-    findAll = (callback) => {
-        model.findAll(callback)
+    findNotes = (callback) => {
+        model.findNotes(callback)
+    };
+
+    /**
+ * @description Update Note by id and return response to controller
+ * @method update is used to update Note by ID
+ * @param callback is the callback for controller
+ */
+    updateNotes = (noteInfo, callback) => {
+        return model.updateNotes(noteInfo, callback);
+    };
+
+    /**
+     * @description Delete Note by id and return response to controller
+     * @method deleteById is used to remove Note by ID
+     * @param callback is the callback for controller
+     */
+    deleteNotes = (noteID, callback) => {
+        return model.deleteById(noteID, callback);
     };
 
 }

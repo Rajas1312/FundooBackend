@@ -731,3 +731,67 @@
 {"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T11:41:00.856Z"}
 {"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T11:41:59.117Z"}
 {"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-18T11:42:07.445Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T15:40:51.138Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T15:40:57.619Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T15:44:11.521Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T15:44:47.318Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T16:01:12.587Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T18:58:40.446Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T18:58:56.801Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:01:36.949Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:01:44.565Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:03:55.663Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:05:18.478Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:06:24.634Z"}
+{"message":"note updated successfully !","level":"info","timestamp":"2021-03-18T19:06:27.655Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-18T19:06:38.528Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:14:52.083Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:14:59.736Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:15:07.055Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:15:39.685Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:16:03.366Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:17:01.647Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:17:05.434Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:17:30.870Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:18:51.385Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:19:14.942Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-18T19:22:36.443Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-18T19:22:39.673Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-18T19:22:54.826Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T03:57:53.878Z"}
+{"message":"email sent sucessfully","level":"info","timestamp":"2021-03-19T03:58:44.924Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T03:59:11.153Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T04:08:43.041Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-19T04:08:57.331Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T04:12:19.192Z"}
+{"message":"note updated successfully !","level":"info","timestamp":"2021-03-19T04:12:53.897Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-19T04:13:06.604Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-19T04:13:20.652Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-19T04:13:31.870Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T04:31:05.352Z"}
+{"message":"email sent sucessfully","level":"info","timestamp":"2021-03-19T04:31:17.580Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T09:48:44.040Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T09:50:42.288Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T09:51:00.955Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T09:52:14.150Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T09:53:14.844Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T09:53:37.712Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T12:13:16.866Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T12:14:56.076Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T12:15:23.117Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T12:15:47.184Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T12:16:01.154Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T12:26:52.824Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T12:46:50.807Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T12:54:45.770Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T13:09:51.842Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T13:37:47.309Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T13:38:03.973Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T13:39:05.236Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T13:39:38.597Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T13:40:47.358Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T13:41:11.089Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T14:44:37.745Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T14:46:35.660Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T14:52:05.118Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-19T14:52:18.769Z"}

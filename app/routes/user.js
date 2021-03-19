@@ -8,13 +8,22 @@ module.exports = (app) => {
     // Login existing user
     app.post("/login", user.loginUser);
 
+    //forgot password route
     app.post("/forgotPassword", user.forgotPassword)
 
+    //reset password route
     app.post("/resetPassword", user.resetPassword)
 
     // Create a new note
-    app.post("/notes", notes.createNotes);
+    app.post("/notes", helper.verifyToken, notes.createNotes);
 
-    app.get("/notes", notes.findAll);
+    //get all the notes
+    app.get("/notes", notes.findNotes);
+
+    // Update a note with noteId
+    app.put("/notes/:noteId", notes.updateNotes);
+
+    // delete note by noteId
+    app.delete("/notes/:noteId", notes.deleteNotes);
 }
 

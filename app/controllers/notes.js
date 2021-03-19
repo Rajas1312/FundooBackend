@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken')
 
 const ControllerDataValidation = Joi.object({
     title: Joi.string().required(),
-    description: Joi.string().required(),
+    description: Joi.string().required()
 });
 
 class NoteController {
@@ -21,24 +21,23 @@ class NoteController {
                 title: req.body.title,
                 description: req.body.description,
             };
-
+            const token = req.headers.authorization.split(" ")[1];
             const validation = ControllerDataValidation.validate(noteInfo);
             return validation.error ?
                 res.status(400).send({
                     success: false,
                     message: "please enter valid details",
                 }) :
-                noteService.createNotes(noteInfo, (error, data) => {
+                noteService.createNotes(noteInfo, token, (error, data) => {
                     return error ?
                         (logger.error("Some error occurred while creating note"),
                             res.send({
                                 success: false,
                                 status_code: status.Internal_Server_Error,
-                                message: "Some error occurred while creating note",
+                                message: "Some error occurred while creating note!!",
                             })) :
                         res.send({
                             success: true,
-                            //status_code: status.Success,
                             message: "note added successfully !",
                             data: data,
                         });
@@ -47,7 +46,7 @@ class NoteController {
             res.send({
                 success: false,
                 status_code: status.Internal_Server_Error,
-                message: "Some error occurred while creating note",
+                message: "Some error occurred while creating note!!!!",
             });
         }
     };
@@ -57,9 +56,9 @@ class NoteController {
     * @message Find all the note
     * @method findAll is service class method
     */
-    findAll = (req, res) => {
+    findNotes = (req, res) => {
         try {
-            noteService.findAll((error, data) => {
+            noteService.findNotes((error, data) => {
                 return error ?
                     (logger.error("Some error occurred while retrieving notes"),
                         res.send({
@@ -70,8 +69,7 @@ class NoteController {
                     (logger.info("Successfully retrieved notes !"),
                         res.send({
                             success: true,
-                            status_code: status.Success,
-                            message: `note found`,
+                            message: `notes found`,
                             data: data,
                         }));
             });
@@ -84,5 +82,71 @@ class NoteController {
         }
     };
 
+    /**
+    * @description update a note by id
+    * @message update and save a note
+    * @param res is used to send the response
+    */
+    updateNotes = (req, res) => {
+        const noteInfo = {
+            title: req.body.title,
+            description: req.body.description,
+            noteID: req.params.noteId,
+        };
+        const noteData = {
+            title: noteInfo.title,
+            description: noteInfo.description,
+        };
+        const validation = ControllerDataValidation.validate(noteData);
+        return validation.error ?
+            res.status(400).send({
+                success: false,
+                message: "please enter valid details " + validation.error,
+            }) :
+            noteService.updateNotes(noteInfo, (error, data) => {
+                return (
+                    error ?
+                        (logger.error("Error updating note with id : " + noteID),
+                            res.send({
+                                status_code: status.Internal_Server_Error,
+                                message: "Error updating note with id : " + noteID,
+                            })) :
+                        !data ?
+                            (logger.error("note not found with id : " + noteID),
+                                res.send({
+                                    status_code: status.Not_Found,
+                                    message: "note not found with id : " + noteID,
+                                })) :
+                            logger.info("note updated successfully !"),
+                    res.send({
+                        message: "note updated successfully !",
+                        data: data,
+                    })
+                );
+            });
+    }
+
+    /**
+    * @description Delete a note by id
+    * @message Delete a note
+    * @param res is used to send the response
+    */
+    deleteNotes(req, res) {
+        const noteID = req.params.noteId;
+        noteService.deleteNotes(noteID, (error, data) => {
+            return (
+                error ?
+                    (logger.error("note not found with id " + noteID),
+                        res.send({
+                            status_code: status.Not_Found,
+                            message: "note not found with id " + noteID,
+                        })) :
+                    logger.info("note deleted successfully!"),
+                res.send({
+                    message: "note deleted successfully!",
+                })
+            );
+        });
+    }
 }
 module.exports = new NoteController()
