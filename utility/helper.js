@@ -34,7 +34,6 @@ class Helper {
     verifyToken = (req, res, next) => {
         try {
             let token = req.headers.authorization.split(" ")[1];
-            //console.log(token);
             const decode = jwt.verify(token, process.env.JWT_SECRET);
             req.user = decode;
             next();

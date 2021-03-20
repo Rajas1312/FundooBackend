@@ -30,7 +30,6 @@ class NoteModel {
             description: noteInfo.description,
             userId: noteInfo.userId
         });
-        console.log(note)
         note.save(callback);
     };
 
