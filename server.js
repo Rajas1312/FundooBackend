@@ -4,7 +4,7 @@ const logger = require('./logger/logger');
 const dotenv = require('dotenv');
 const swaggerUi = require('swagger-ui-express')
 const swaggerJson = require('./swagger/swagger.json')
-require("./config/database.config")();
+const dbConnection = require("./config/database.config");
 dotenv.config();
 const port = process.env.PORT
 
@@ -25,5 +25,12 @@ require('./app/routes/user')(app);
 app.listen(port, () => {
     logger.info(`server is listining at port ${port}`)
 });
-
+new dbConnection(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+}).connect().then((uri) => console.log("Connected to " + uri))
+    .catch((err) => console.log("Could not connect database", err));
 module.exports = app;

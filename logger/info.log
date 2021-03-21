@@ -862,3 +862,10 @@
 {"message":"data found in redis ","level":"info","timestamp":"2021-03-21T09:40:38.737Z"}
 {"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-21T09:40:38.738Z"}
 {"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-21T09:40:48.448Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-21T11:29:42.659Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-21T11:29:50.512Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-21T11:29:50.512Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-21T11:31:56.066Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-21T11:33:58.949Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-21T11:34:03.778Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-21T11:34:14.980Z"}

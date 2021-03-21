@@ -69,19 +69,4 @@ MongoDBAdapter.prototype.connect = function () {
         }.bind(this)
     );
 };
-
-const uri = process.env.MONGODB_URL;
-
-let mongoDBAdapter = new MongoDBAdapter(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-});
-mongoDBAdapter
-    .connect()
-    .then((uri) => console.log("Connected to " + uri))
-    .catch((err) => console.log("Could not connect database", err));
-
 module.exports = MongoDBAdapter;
