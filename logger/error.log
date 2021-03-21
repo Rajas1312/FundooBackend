@@ -56,3 +56,5 @@
 {"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-18T04:03:18.446Z"}
 {"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-18T04:03:18.554Z"}
 {"message":"Some error occurred while logging in","level":"error","timestamp":"2021-03-18T04:03:18.811Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-21T08:56:24.165Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-21T09:17:56.533Z"}

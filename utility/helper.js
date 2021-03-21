@@ -45,5 +45,15 @@ class Helper {
         }
     };
 
+    /**
+    * @description get emial from token
+    * @param {*} token
+    */
+    getEmailFromToken = (token) => {
+        let decode = jwt.verify(token, process.env.JWT_SECRET);
+        let emailId = decode.emailId;
+        return emailId;
+    };
+
 }
 module.exports = new Helper();

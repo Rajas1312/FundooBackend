@@ -58,7 +58,8 @@ class NoteController {
     */
     findNotes = (req, res) => {
         try {
-            noteService.findNotes((error, data) => {
+            const token = req.headers.authorization.split(" ")[1];
+            noteService.findNotes(token, (error, data) => {
                 return error ?
                     (logger.error("Some error occurred while retrieving notes"),
                         res.send({

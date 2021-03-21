@@ -18,7 +18,7 @@ module.exports = (app) => {
     app.post("/notes", helper.verifyToken, notes.createNotes);
 
     //get all the notes
-    app.get("/notes", notes.findNotes);
+    app.get("/notes", helper.verifyToken, notes.findNotes);
 
     // Update a note with noteId
     app.put("/notes/:noteId", notes.updateNotes);
