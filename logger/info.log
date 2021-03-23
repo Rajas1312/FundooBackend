@@ -869,3 +869,234 @@
 {"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-21T11:33:58.949Z"}
 {"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-21T11:34:03.778Z"}
 {"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-21T11:34:14.980Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T05:03:37.260Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T05:04:52.899Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T05:04:52.925Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T05:05:47.627Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T05:05:52.716Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T05:05:52.716Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T05:28:02.150Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T05:29:59.105Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T05:29:59.106Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T05:36:14.746Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T05:36:14.747Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T05:39:54.578Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T05:40:17.916Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T05:40:17.916Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T06:06:23.107Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T10:29:05.724Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T10:31:48.655Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T10:31:52.225Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T10:31:52.258Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T10:32:06.758Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T10:32:13.323Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T10:32:13.324Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T10:55:07.687Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T13:32:49.097Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T13:33:36.449Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T13:35:46.247Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T13:35:48.602Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T13:35:48.639Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T13:37:31.986Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T13:37:32.431Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T13:40:11.909Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T13:42:54.766Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T13:43:04.759Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T13:43:04.759Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T13:44:58.548Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T13:45:29.049Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T13:45:33.601Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T13:46:58.949Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T13:47:11.278Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T13:47:11.278Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T13:47:39.654Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T13:47:48.029Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T13:47:48.029Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T13:48:15.451Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T13:48:22.230Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T13:48:22.230Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T13:48:56.147Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T13:49:03.934Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T13:49:03.934Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T13:49:19.647Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T13:49:32.630Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T13:49:32.630Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T13:52:14.288Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T13:52:14.289Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T13:52:36.236Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T13:52:36.237Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:00:45.112Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T14:00:52.495Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:01:06.439Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:01:06.440Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T14:01:34.351Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:01:42.237Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:01:42.238Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T14:02:07.376Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:02:13.515Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:02:13.515Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:02:57.857Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:03:00.065Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:03:00.066Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:09:31.245Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T14:09:52.490Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:10:37.813Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:10:37.813Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T14:11:00.271Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:11:10.422Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:11:10.422Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:24:26.230Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:24:26.230Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:25:09.145Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:25:17.538Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:25:17.538Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:27:31.661Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:27:34.880Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:27:34.895Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:29:34.690Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:29:46.886Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:29:46.887Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:30:03.450Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:30:03.450Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:30:48.625Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:30:55.589Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:30:55.589Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:32:27.410Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:32:50.632Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:32:50.663Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:35:09.986Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:35:10.514Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:35:10.514Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:36:52.745Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:37:53.245Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:37:53.268Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:42:42.909Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:43:18.742Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:44:49.470Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:44:57.355Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:45:05.128Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:45:05.128Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:45:56.658Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:45:59.504Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:46:24.576Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:46:43.558Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:47:03.166Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:47:34.001Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:47:39.119Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:47:59.515Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:48:07.446Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:48:07.476Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:49:08.246Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T14:49:11.561Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:49:11.561Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:49:40.476Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:49:50.864Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:50:28.598Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:50:35.132Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:51:41.988Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:51:47.502Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:52:44.409Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:52:48.114Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:55:00.613Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T14:55:10.200Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T14:55:10.239Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T14:59:55.730Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:00:28.250Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T15:00:36.368Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T15:00:36.395Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:01:42.384Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:02:08.779Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-22T15:02:12.365Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T15:02:12.392Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:10:03.125Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T15:10:06.294Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T15:10:06.294Z"}
+{"message":"note updated successfully !","level":"info","timestamp":"2021-03-22T15:10:41.308Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-22T15:11:12.871Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-22T15:11:12.872Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T15:12:21.421Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:13:02.476Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:13:42.341Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:13:54.677Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:13:57.772Z"}
+{"message":"note updated successfully !","level":"info","timestamp":"2021-03-22T15:15:45.413Z"}
+{"message":"note updated successfully !","level":"info","timestamp":"2021-03-22T15:17:17.118Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:47:12.763Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T15:47:35.358Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T15:48:41.816Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-22T15:48:42.788Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T16:25:47.852Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T16:26:37.628Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T16:28:02.555Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T16:28:23.944Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T16:28:39.858Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T16:28:52.773Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-22T16:33:28.328Z"}
+{"message":"note archived successfully!","level":"info","timestamp":"2021-03-22T16:33:28.687Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T05:50:15.147Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T05:52:57.576Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T05:55:40.792Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T05:56:06.385Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T05:56:44.766Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T05:57:32.068Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T05:58:11.684Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T05:59:00.444Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:00:25.501Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:01:54.562Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:03:08.465Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-23T06:11:16.953Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-23T06:11:16.969Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:11:35.814Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:19:09.404Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:22:20.347Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:23:08.341Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:36:17.341Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:38:41.752Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:39:45.268Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:40:56.058Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:41:15.938Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:41:50.781Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T06:51:13.695Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:11:12.017Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:12:55.025Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:13:31.183Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:13:49.541Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:14:30.784Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:14:41.811Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-23T07:14:48.566Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:15:10.680Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:15:22.446Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-23T07:15:25.795Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-23T07:15:25.819Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:15:41.825Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-23T07:15:42.579Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-23T07:15:42.580Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:31:54.254Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:33:28.170Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:34:05.332Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:34:21.794Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:35:32.315Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:35:48.159Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:36:12.734Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:36:22.560Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:36:27.340Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:37:46.294Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:38:56.154Z"}
+{"message":"note updated successfully !","level":"info","timestamp":"2021-03-23T07:39:23.296Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:58:29.884Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:59:05.128Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T07:59:34.932Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T08:00:44.379Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T08:01:05.769Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T08:01:28.462Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-23T08:01:33.337Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-23T08:01:33.338Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-23T08:01:36.108Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-23T08:01:36.108Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-23T08:01:52.164Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-23T08:02:39.005Z"}
+{"message":"server is listining at port 3000","level":"info","timestamp":"2021-03-23T08:03:46.381Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-23T08:04:20.399Z"}
+{"message":"note deleted successfully!","level":"info","timestamp":"2021-03-23T08:04:31.850Z"}
+{"message":"data found in redis ","level":"info","timestamp":"2021-03-23T08:08:22.078Z"}
+{"message":"Successfully retrieved notes !","level":"info","timestamp":"2021-03-23T08:08:22.078Z"}

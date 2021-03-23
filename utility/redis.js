@@ -38,7 +38,7 @@ class RedisCache {
     */
     setRedis = (data, userEmail, key) => {
         const KEY = `${key}${userEmail}`;
-        return client.setex(KEY, 20000000, JSON.stringify(data));
+        return client.setex(KEY, 36000, JSON.stringify(data));
     };
 }
 module.exports = new RedisCache();

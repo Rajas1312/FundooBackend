@@ -25,5 +25,24 @@ module.exports = (app) => {
 
     // delete note by noteId
     app.delete("/notes/:noteId", notes.deleteNotes);
+
+    // delete note by setting isdeleted flag true
+    app.put("/notes/delete/:noteId", helper.verifyToken, notes.removeNote);
+
+    // delete note by setting isdeleted flag true
+    app.put("/notes/archive/:noteId", helper.verifyToken, notes.archiveNote);
+
+    // Create a new label
+    app.post("/labels", helper.verifyToken, notes.createLabel);
+
+    // Retrieve all labels
+    app.get("/labels", helper.verifyToken, notes.findLabels);
+
+    // Update a label with labelId
+    app.put("/labels/:labelId", helper.verifyToken, notes.updateLabels);
+
+    // Delete a label with labelId
+    app.delete("/labels/:labelId", helper.verifyToken, notes.deleteLabels);
+
 }
 
