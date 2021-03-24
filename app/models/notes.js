@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const User = require("../models/user.js");
 
 const NoteSchema = mongoose.Schema({
-    title: { type: String, required: true, trim: true, },
-    description: { type: String, required: true, trim: true, },
+    title: { type: String, required: true, },
+    description: { type: String, required: true, },
     isArchived: { type: Boolean, default: false },
     isDeleted: { type: Boolean, default: false },
     userId: {

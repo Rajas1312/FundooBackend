@@ -1,0 +1,14 @@
+{
+    "notes": {
+        "createNotes": {
+            "title": "mynote",
+            "description": "mynote"
+        },
+        "notesWithoutTitle": {
+            "description": "mynote"
+        },
+        "properToken": {
+            "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbElkIjoiaXRzbWVyYWphczJAZ21haWwuY29tIiwiaWQiOiI2MDRlNTM1MmMyODYwYjMyMTBlZTI3YzYiLCJpYXQiOjE2MTYwNDI5MjUsImV4cCI6MTYxODYzNDkyNX0.AC_p6MauQsgGTbJIA4BPFYmgU6BGDkwkKhKwJCFhMUo"
+        }
+    }
+}

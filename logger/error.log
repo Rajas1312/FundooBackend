@@ -80,3 +80,8 @@
 {"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-23T07:14:48.566Z"}
 {"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-23T07:15:25.795Z"}
 {"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-23T15:44:09.666Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-24T04:35:56.394Z"}
+{"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-24T04:43:18.711Z"}
+{"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-24T04:43:18.828Z"}
+{"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-24T04:48:31.970Z"}
+{"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-24T04:48:32.094Z"}
