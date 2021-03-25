@@ -111,7 +111,8 @@ class UserController {
                 logger.info("email sent sucessfully")
                 result.token = helper.createToken(result)
                 res.send(statics.SuccessEmail)
-                auth.sendEmail(result)
+                //console.log(result)
+                //auth.sendEmail(result)
             }
         })
     }

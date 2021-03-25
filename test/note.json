@@ -5,10 +5,19 @@
             "description": "mynote"
         },
         "notesWithoutTitle": {
+            "noteId": "602fe7f7d22dba060",
             "description": "mynote"
+        },
+        "noteToUpdate": {
+            "noteId": "602fe7f7d22dba060c91bd96",
+            "title": "Rajas",
+            "description": "Hello"
         },
         "properToken": {
             "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbElkIjoiaXRzbWVyYWphczJAZ21haWwuY29tIiwiaWQiOiI2MDRlNTM1MmMyODYwYjMyMTBlZTI3YzYiLCJpYXQiOjE2MTYwNDI5MjUsImV4cCI6MTYxODYzNDkyNX0.AC_p6MauQsgGTbJIA4BPFYmgU6BGDkwkKhKwJCFhMUo"
+        },
+        "noteToDelete": {
+            "noteId": "602fe88fd22dba060c91bd99"
         }
     }
 }

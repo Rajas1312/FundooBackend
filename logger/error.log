@@ -85,3 +85,30 @@
 {"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-24T04:43:18.828Z"}
 {"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-24T04:48:31.970Z"}
 {"message":"Some error occurred while creating notes","level":"error","timestamp":"2021-03-24T04:48:32.094Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-24T17:45:36.019Z"}
+{"message":"note not found with id : ","level":"error","timestamp":"2021-03-25T05:00:06.567Z"}
+{"message":"note not found with id : ","level":"error","timestamp":"2021-03-25T05:01:34.427Z"}
+{"message":"note not found with id : ","level":"error","timestamp":"2021-03-25T05:05:04.671Z"}
+{"level":"error","message":"Error retrieving data from redis cache","timestamp":"2021-03-25T05:06:24.572Z"}
+{"message":"note not found with id 10","level":"error","timestamp":"2021-03-25T05:22:46.012Z"}
+{"message":"note not found with id 10","level":"error","timestamp":"2021-03-25T05:23:24.761Z"}
+{"message":"note not found with id : ","level":"error","timestamp":"2021-03-25T05:24:14.498Z"}
+{"message":"Error updating note with id : ","level":"error","timestamp":"2021-03-25T05:25:03.400Z"}
+{"message":"Error updating note with id : ","level":"error","timestamp":"2021-03-25T05:25:22.070Z"}
+{"message":"Error updating note with id : ","level":"error","timestamp":"2021-03-25T05:26:16.024Z"}
+{"message":"note not found with id 10","level":"error","timestamp":"2021-03-25T05:31:59.576Z"}
+{"message":"Error updating note with id : ","level":"error","timestamp":"2021-03-25T05:32:25.515Z"}
+{"message":"Error updating note with id : ","level":"error","timestamp":"2021-03-25T05:34:41.073Z"}
+{"message":"Error updating note with id : ","level":"error","timestamp":"2021-03-25T05:35:04.281Z"}
+{"message":"note not found with id 10","level":"error","timestamp":"2021-03-25T05:38:48.563Z"}
+{"message":"note not found with id 10","level":"error","timestamp":"2021-03-25T05:39:24.277Z"}
+{"message":"Error updating note with id : ","level":"error","timestamp":"2021-03-25T05:40:57.513Z"}
+{"message":"Error updating note with id : ","level":"error","timestamp":"2021-03-25T05:42:02.559Z"}
+{"message":"Error updating note with id : ","level":"error","timestamp":"2021-03-25T05:43:54.043Z"}
+{"message":"note not found with id :noteId602fe88fd22dba060c91bd99","level":"error","timestamp":"2021-03-25T05:46:25.683Z"}
+{"message":"note not found with id :noteId10","level":"error","timestamp":"2021-03-25T05:46:25.701Z"}
+{"message":"note not found with id :noteId602fe88fd22dba060c91bd99","level":"error","timestamp":"2021-03-25T05:49:49.469Z"}
+{"message":"note not found with id :noteId602fe88fd22dba060c91bd99","level":"error","timestamp":"2021-03-25T05:50:34.822Z"}
+{"message":"note not found with id :noteId10","level":"error","timestamp":"2021-03-25T05:50:34.842Z"}
+{"message":"note not found with id :noteId602fe88fd22dba060c91bd99","level":"error","timestamp":"2021-03-25T05:52:28.449Z"}
+{"message":"note not found with id :noteId10","level":"error","timestamp":"2021-03-25T05:52:28.466Z"}

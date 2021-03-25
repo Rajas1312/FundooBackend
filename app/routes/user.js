@@ -1,5 +1,6 @@
 const user = require('../controllers/user');
 const notes = require("../controllers/notes.js");
+const labels = require('../controllers/label')
 const helper = require("../../utility/helper.js");
 module.exports = (app) => {
     // Create a new user
@@ -21,10 +22,10 @@ module.exports = (app) => {
     app.get("/notes", helper.verifyToken, notes.findNotes);
 
     // Update a note with noteId
-    app.put("/notes/:noteId", notes.updateNotes);
+    app.put("/notes/:noteId", helper.verifyToken, notes.updateNotes);
 
     // delete note by noteId
-    app.delete("/notes/:noteId", notes.deleteNotes);
+    app.delete("/notes/:noteId", helper.verifyToken, notes.deleteNotes);
 
     // delete note by setting isdeleted flag true
     app.put("/notes/delete/:noteId", helper.verifyToken, notes.removeNote);
@@ -33,16 +34,16 @@ module.exports = (app) => {
     app.put("/notes/archive/:noteId", helper.verifyToken, notes.archiveNote);
 
     // Create a new label
-    app.post("/labels", helper.verifyToken, notes.createLabel);
+    app.post("/labels", helper.verifyToken, labels.createLabel);
 
     // Retrieve all labels
-    app.get("/labels", helper.verifyToken, notes.findLabels);
+    app.get("/labels", helper.verifyToken, labels.findLabels);
 
     // Update a label with labelId
-    app.put("/labels/:labelId", helper.verifyToken, notes.updateLabels);
+    app.put("/labels/:labelId", helper.verifyToken, labels.updateLabels);
 
     // Delete a label with labelId
-    app.delete("/labels/:labelId", helper.verifyToken, notes.deleteLabels);
+    app.delete("/labels/:labelId", helper.verifyToken, labels.deleteLabels);
 
 }
 
