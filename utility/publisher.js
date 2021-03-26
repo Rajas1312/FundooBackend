@@ -3,10 +3,6 @@ const amqp = require("amqplib/callback_api");
 
 class Publish {
     getMessage = (userInfo, callback) => {
-        console.log("inside publisher");
-        console.log("userInfo");
-        console.log(userInfo);
-
         amqp.connect("amqp://localhost", (error, connection) => {
             if (error) {
                 return callback(error, null);
@@ -21,7 +17,6 @@ class Publish {
                     durable: false,
                 });
                 channel.sendToQueue(queueName, Buffer.from(message));
-                console.log(`Message sends to queue : ${message}`);
                 setTimeout(() => {
                     console.log("connection close");
                     connection.close();

@@ -62,7 +62,6 @@ class UserService {
                             new Error("Some error occurred while consuming message"),
                             null
                         );
-                    //auth.sendEmail()
                     data.token = helper.createToken(data)
                     auth.sendEmail(data)
                     return callback(null, data);
